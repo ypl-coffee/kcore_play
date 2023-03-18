@@ -1,10 +1,11 @@
 #define _LARGEFILE64_SOURCE
-#include <sys/types.h>
-#include <sys/stat.h>
+
 #include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
 #include <libelf.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 const unsigned long long vaddr_text = 0xffffffffbcc00000;	/* $ grep " \_text" /proc/kallsyms */
 const unsigned long long vaddr_nr_cpu_ids = 0xffffffffbe3af604;	/* $ grep " nr_cpu_ids" /proc/kallsyms */
